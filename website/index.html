@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employee Database</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>Employee Database</h1>
+    <p>Welcome to the Employee Information System!</p>
+
+
+    <div class="buttons">
+        <button onclick="showEmployees()">Show Employees</button>
+        <button onclick="closeEmployees()">Close Employees</button>
+
+        <button onclick="showContacts()">Show Contacts</button>
+        <button onclick="closeContacts()">Close Contacts</button>
+
+        <button onclick="showPayments()">Show Payments</button>
+        <button onclick="closePayments()">Close Payments</button>
+    </div>
+
+
+    <div id="results">
+        <p>Your database information will appear here.</p>
+    </div>
+
+</div>
+<script>
+    function showEmployees() {
+        fetch("/employees")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("results").innerHTML = data;
+            });
+    }
+
+    function closeEmployees() {
+        document.getElementById("results").innerHTML = "";
+    }
+
+    function showContacts() {
+        fetch("/contacts")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("results").innerHTML = data;
+            });
+    }
+
+    function showPayments() {
+        fetch("/payments")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("results").innerHTML = data;
+            });
+    }
+
+    function closeContacts() {
+        document.getElementById("results").innerHTML = "";
+    }
+
+    function closePayments() {
+        document.getElementById("results").innerHTML = "";
+    }
+
+
+
+</script>
+
+</body>
+</html>

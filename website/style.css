@@ -1,0 +1,45 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f4f8;
+    margin: 0;
+}
+
+.container {
+    width: 80%;
+    margin: 50px auto;
+    text-align: center;
+}
+
+h1 {
+    color: #26344a;
+}
+
+p {
+    color: #666;
+}
+
+.buttons {
+    margin-top: 30px;
+}
+
+button {
+    background-color: #26344a;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    margin: 8px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #405779;
+}
+
+#results {
+    background-color: white;
+    margin-top: 30px;
+    padding: 25px;
+    border-radius: 8px;
+    min-height: 100px;
+}
